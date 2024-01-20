@@ -22,6 +22,4 @@ document.addEventListener('DOMContentLoaded', function () {
   // Open the video modal after a delay (adjust the delay based on your preference)
   setTimeout(openVideoModal, 200);
 });
-</script>
-</body>
-</html>
+
