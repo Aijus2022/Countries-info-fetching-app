@@ -25,6 +25,49 @@
     </style>
 </head>
 <body>
+ <!-- Video Background Modal -->
+<div id="videoModal" class="modal">
+  <div class="modal-content">
+    <!-- Close button -->
+    <span class="close" onclick="closeVideoModal()">&times;</span>
+    
+    <!-- Video background -->
+    <div class="video-container">
+      <!-- Replace the video source with your own -->
+      <iframe src="https://giphy.com/embed/ys25zLolNge9G" width="480" height="271" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    </div>
+    
+    <!-- Questionnaire -->
+    <div class="questionnaire">
+      <h2>What is being a digital nomad?</h2>
+      <form id="questionForm">
+        <label>
+          <input type="radio" name="answer" value="1"> Work remotely from your home country for any company based in any other country
+        </label>
+        <label>
+          <input type="radio" name="answer" value="2"> Work remotely anywhere in the world for a company based in your home country
+        </label>
+        <label>
+          <input type="radio" name="answer" value="3"> Work in any country for a company based in that particular country
+        </label>
+        <label>
+          <input type="radio" name="answer" value="4"> Work remotely anywhere in the world for any company based in any country
+        </label>
+        <button type="button" onclick="handleQuestionAnswer()">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Main Content -->
+<main class="col-md-8 neon-border" id="main-content">
+  <div class="row">
+    <div class="col-md-12" id="search-container">
+      <input type="text" class="form-control" id="country-input" placeholder="Enter Country">
+      <button class="btn btn-primary" id="search-button">Search</button>
+    </div>
+  </div>
+  <!-- Other main content goes here -->
 
     <h2>Country Information</h2>
 
@@ -40,6 +83,7 @@
 
     <!-- Display area for country flag -->
     <div id="flagContainer"></div>
+    </main>
 
     <script>
         // Event listener for the form submission
